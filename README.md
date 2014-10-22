@@ -1,6 +1,6 @@
 #Definition
 Basic wrapper for velocity (https://github.com/julianshapiro/velocity) by grebett.
-Enables create reusable effects such as:
+It enables you to create reusable effects such as:
 
 ```javascript
 var effect = {
@@ -83,7 +83,7 @@ Each effect in the array can be overwritten passing the array `[effect, overwrit
 velocity($rect, [S, [N, {duration: 1000}], S]);
 ```
 
-If you want to conserve last overwriting effect options, use '=':
+If you want to conserve last overwriting effect options, use `=`:
 ```javascript
 velocity($rect, [S, [N, {duration:1000}], [S, '=']]);
 ```
