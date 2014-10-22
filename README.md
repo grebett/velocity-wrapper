@@ -44,8 +44,10 @@ Dependencies needed:
 #Examples
 
 Considering a rect and a circle as below:
-    var $rect = $('rect'),
-        $circle = $('circle');
+```
+var $rect = $('rect'),
+    $circle = $('circle');
+```
 
 Basic velocity call: 
 `velocity($rect, N);`
