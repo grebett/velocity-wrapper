@@ -45,7 +45,7 @@ Dependencies needed:
 * __lodash__: http://lodash.com/
 * __jQuery__: http://jquery.com/download/
 
-#Examples
+#Usages
 
 Considering a rect and a circle as below:
 ```javascript
