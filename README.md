@@ -38,8 +38,8 @@ or array of effects like:
 #Dependencies
 Dependencies needed:
 
-*__lodash__: http://lodash.com/
-*__jQuery__: http://jquery.com/download/
+* __lodash__: http://lodash.com/
+* __jQuery__: http://jquery.com/download/
 
 #Examples
 
