@@ -55,12 +55,12 @@ var $rect = $('rect'),
 
 Basic velocity call: 
 ```javascript
-velocity($rect, N);
+velocity($rect, effect);
 ```
 
 Overwriting call:
 ```javascript
-velocity($rect, N, {duration:1000});
+velocity($rect, effect, {duration:1000});
 ```
 
 Predefined string effect call:
@@ -75,28 +75,28 @@ velocity($rect, arrayOfEffects);
 
 Or an array of effects:
 ```javascript
-velocity($rect, [S, S, N, 'fadeOut']);
+velocity($rect, [effect1, effect2, effect1, 'fadeOut']);
 ```
 
 Each effect in the array can be overwritten passing the array `[effect, overwriting options]`:
 ```javascript
-velocity($rect, [S, [N, {duration: 1000}], S]);
+velocity($rect, [effect1, [effect1, {duration: 1000}], effect2]);
 ```
 
 If you want to conserve last overwriting effect options, use `=`:
 ```javascript
-velocity($rect, [S, [N, {duration:1000}], [S, '=']]);
+velocity($rect, [effect1, [effect1, {duration:1000}], [effect2, '=']]);
 ```
 
 You can start another animation easily using the complete attribute:
 ```javascript
 var startCircleAnimation = function () {
-    velocity($circle, [S, [N, {duration: 1000}], S]);
+    velocity($circle, [effect1, [effect1, {duration: 1000}], S]);
 };
-velocity($rect, [S, S, [N, {complete: startCircleAnimation}], 'fadeOut']);
+velocity($rect, [effect1, effect1, [effect3, {complete: startCircleAnimation}], 'fadeOut']);
 ```
 
-You can easily combine effects into a reusable animation:
+Combining these possibilities, you can easily combine effects into a reusable animation:
 ```javascript
 var startSquareAnimation = function () {
     velocity($rect, e0);
@@ -104,6 +104,6 @@ var startSquareAnimation = function () {
 var startCircleAnimation = function () {
     velocity($circle, e1);
 };
-var e0 = [S, S, [N, {complete: startCircleAnimation}]];
-var e1 = [S, S, [N, {complete: startSquareAnimation}]];
+var e0 = [effect0, effect1, [effect2, {complete: startCircleAnimation}]];
+var e1 = [effect0, effect1, [effect2, {complete: startSquareAnimation}]];
 ```
