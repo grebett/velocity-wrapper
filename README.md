@@ -1,3 +1,5 @@
+__Should be rewritten soon to be used without jQuery, and may exclude lodash dependency too__
+
 #Definition
 Basic wrapper for velocity (https://github.com/julianshapiro/velocity) by grebett.
 It enables you to create reusable effects such as:
